@@ -53,10 +53,15 @@ const columns = [
     cell: (row) => <p className="text-start">{row.EMail}</p>,
     sorttable: true,
   },
+  {
+    name: 'Pur. TSIS',
+    cell: (row) => <p className="text-start">{row.PurTSIS}</p>,
+    sorttable: true,
+  },
 ];
 
 const urlApi =
-  'https://script.google.com/macros/s/AKfycby2J6gNdkhnheqgjYwZYwm9LOAw5xHLthkNMkEpkkzVpR6w84jrSA7nDxZ1qDYuyTgP/exec';
+  'https://script.google.com/macros/s/AKfycbwEN08JFTs6Zmi2SVu2ghRCH5j2zYinLUjyGVpKPkzrQvMq8UdB8Q4Yb12e5zH0FwW_/exec';
 
 function App() {
   const [data, setData] = useState([]);
@@ -94,8 +99,6 @@ function App() {
     });
     setRecords(newData);
   };
-
-  console.log(data);
 
   return (
     <div className="container mx-auto">
